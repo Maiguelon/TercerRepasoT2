@@ -1,0 +1,23 @@
+[
+  {
+    "Id": 100,
+    "VehiculoId": 1,
+    "Cliente": "Laura Gomez",
+    "FechaRetiro": "2026-02-01T10:00:00",
+    "FechaDevolucion": "2026-02-05T18:00:00"
+  },
+  {
+    "Id": 101,
+    "VehiculoId": 2,
+    "Cliente": "Martin Lopez",
+    "FechaRetiro": "2026-02-14T09:00:00",
+    "FechaDevolucion": "2026-02-16T09:00:00"
+  },
+  {
+    "Id": 102,
+    "VehiculoId": 4,
+    "Cliente": "Aramis Agency",
+    "FechaRetiro": "2026-02-25T08:00:00",
+    "FechaDevolucion": "2026-02-28T20:00:00"
+  }
+]

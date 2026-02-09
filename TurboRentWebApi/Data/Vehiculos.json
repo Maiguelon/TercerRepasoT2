@@ -1,0 +1,36 @@
+[
+  {
+    "$type": "auto",
+    "CantidadPuertas": 4,
+    "EsAutomatico": false,
+    "Id": 1,
+    "Marca": "Toyota",
+    "Modelo": "Etios",
+    "TarifaDiaria": 15000.0
+  },
+  {
+    "$type": "auto",
+    "CantidadPuertas": 5,
+    "EsAutomatico": true,
+    "Id": 2,
+    "Marca": "Honda",
+    "Modelo": "Civic",
+    "TarifaDiaria": 22000.0
+  },
+  {
+    "$type": "camioneta",
+    "CapacidadCargaKg": 800.0,
+    "Id": 3,
+    "Marca": "Fiat",
+    "Modelo": "Strada",
+    "TarifaDiaria": 18000.0
+  },
+  {
+    "$type": "camioneta",
+    "CapacidadCargaKg": 1500.0,
+    "Id": 4,
+    "Marca": "Ford",
+    "Modelo": "Ranger",
+    "TarifaDiaria": 30000.0
+  }
+]
