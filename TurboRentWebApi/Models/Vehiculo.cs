@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 [JsonDerivedType(typeof(Auto), typeDiscriminator: "auto")]
 [JsonDerivedType(typeof(Camioneta), typeDiscriminator: "camioneta")]
 
-public class Vehiculo
+public abstract class Vehiculo
 {
     public int Id {get; set;}
     public string Marca {get; set;}
