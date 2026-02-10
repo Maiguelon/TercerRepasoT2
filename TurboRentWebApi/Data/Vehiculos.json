@@ -19,7 +19,7 @@
   },
   {
     "$type": "camioneta",
-    "CapacidadCargaKg": 800.0,
+    "CapacidadCargaKg": 800,
     "Id": 3,
     "Marca": "Fiat",
     "Modelo": "Strada",
@@ -27,10 +27,44 @@
   },
   {
     "$type": "camioneta",
-    "CapacidadCargaKg": 1500.0,
+    "CapacidadCargaKg": 1500,
     "Id": 4,
     "Marca": "Ford",
     "Modelo": "Ranger",
     "TarifaDiaria": 30000.0
+  },
+  {
+    "$type": "auto",
+    "CantidadPuertas": 4,
+    "EsAutomatico": false,
+    "Id": 5,
+    "Marca": "Toyota",
+    "Modelo": "Corolla",
+    "TarifaDiaria": 14000.0
+  },
+  {
+    "$type": "camioneta",
+    "CapacidadCargaKg": 2000,
+    "Id": 6,
+    "Marca": "Volkswagen",
+    "Modelo": "Amarok",
+    "TarifaDiaria": 38000.0
+  },
+  {
+    "$type": "camioneta",
+    "CapacidadCargaKg": 1900,
+    "Id": 7,
+    "Marca": "Toyota",
+    "Modelo": "Hilux",
+    "TarifaDiaria": 38000.0
+  },
+  {
+    "$type": "auto",
+    "CantidadPuertas": 4,
+    "EsAutomatico": false,
+    "Id": 8,
+    "Marca": "Fiat",
+    "Modelo": "Punto",
+    "TarifaDiaria": 7000.0
   }
 ]

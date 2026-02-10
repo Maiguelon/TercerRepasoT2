@@ -19,5 +19,26 @@
     "Cliente": "Aramis Agency",
     "FechaRetiro": "2026-02-25T08:00:00",
     "FechaDevolucion": "2026-02-28T20:00:00"
+  },
+  {
+    "Id": 103,
+    "VehiculoId": 8,
+    "Cliente": "Steve Minecraft",
+    "FechaRetiro": "2026-02-11T09:00:00",
+    "FechaDevolucion": "2026-02-16T09:00:00"
+  },
+  {
+    "Id": 104,
+    "VehiculoId": 2,
+    "Cliente": "Mojang",
+    "FechaRetiro": "2026-02-11T09:00:00",
+    "FechaDevolucion": "2026-02-15T09:00:00"
+  },
+  {
+    "Id": 105,
+    "VehiculoId": 4,
+    "Cliente": "Batman",
+    "FechaRetiro": "2026-02-11T09:00:00",
+    "FechaDevolucion": "2026-02-15T09:00:00"
   }
 ]
