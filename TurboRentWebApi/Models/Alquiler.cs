@@ -15,6 +15,6 @@ public class Alquiler
 
     public bool isBetween(DateTime evaluada) // checkea si una fecha está dentro del alquiler
     {
-        return (evaluada > FechaRetiro && evaluada < FechaDevolucion);
+        return (evaluada >= FechaRetiro && evaluada <= FechaDevolucion);
     }
 }

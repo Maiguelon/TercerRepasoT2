@@ -58,20 +58,20 @@ public class AlquilerController : ControllerBase
     [HttpGet("GetVehiculosDisponibles/{dia}")]
     public ActionResult<List<Vehiculo>> GetVehiculosDisponibles(DateTime dia)
     {
-        List<Alquiler> Nocumplen = alquileres.Where(a =>
-        a.isBetween(dia)).ToList();
-        List<Vehiculo> disponibles = new List<Vehiculo>();
-        foreach (var c in Nocumplen)
-        {
-            foreach (var v in vehiculos)
-            {
-                if (v.Id != c.VehiculoId)
-                {
-                    disponibles.Add(v);
-                }
-            }
-        }
-        return Ok(disponibles);   
+        // PASO 1: Armar la "Lista Negra" (IDs de los que NO pueden usarse)
+        // Buscamos en TODOS los alquileres, cuáles "pisan" la fecha elegida.
+        List<int> idsOcupados = alquileres
+            .Where(a => a.isBetween(dia)) // Usamos tu método helper
+            .Select(a => a.VehiculoId)    // Solo nos interesan los IDs
+            .ToList();
+
+        // PASO 2: Filtrar la flota (La Resta)
+        // "Dame todos los vehículos cuyo Id NO ESTÉ en la lista de ocupados"
+        List<Vehiculo> disponibles = vehiculos
+            .Where(v => !idsOcupados.Contains(v.Id))
+            .ToList();
+
+        return Ok(disponibles);
     }
 
     [HttpGet("GetCosto/{idBuscado}/{dias}")]
@@ -229,5 +229,22 @@ public class AlquilerController : ControllerBase
         alquileres.Add(nuevo);
         ADAlquiler.GuardarAlquileres(rutaAlquileres, alquileres);
         return Created("", nuevo);
+    }
+
+    // ----- DELETE -----
+    [HttpDelete("EliminarAlquiler/{idBuscado}")]
+    public ActionResult EliminarAlquiler(int idBuscado)
+    {
+        Alquiler aBorrar = alquileres.FirstOrDefault(a =>
+        a.Id == idBuscado);
+
+        if (aBorrar != null)
+        {
+            alquileres.Remove(aBorrar);
+            ADAlquiler.GuardarAlquileres(rutaAlquileres, alquileres);
+            return Ok("Alquiler Aniquilado exitosamente.");
+        }
+
+        return BadRequest("No hay alquiler con tal id.");
     }
 }
